@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events & Calendar — The Writers Circle</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-icon">✍</span>
+        <div class="logo-text">
+          <span class="logo-name">The Writers Circle</span>
+          <span class="logo-tagline">a local writing community</span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link active">Events</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <p class="section-label">Schedule</p>
+      <h1>Events &amp; Meetings</h1>
+      <p>Check the calendar below for upcoming sessions, workshops, and special events.</p>
+    </div>
+
+    <section class="calendar-section">
+      <div class="container">
+        <div class="calendar-intro">
+          <h2>Our Group Calendar</h2>
+          <p>We meet twice a month — once for open critique and once for a themed writing prompt session. Guest speakers and workshops are posted here as they're scheduled.</p>
+        </div>
+
+        <div class="calendar-embed-wrapper">
+          <!--
+            ╔══════════════════════════════════════════════════════╗
+            ║  PASTE YOUR GOOGLE CALENDAR EMBED CODE BELOW         ║
+            ║                                                       ║
+            ║  1. Open Google Calendar → Settings (⚙)             ║
+            ║  2. Click your calendar name under "My calendars"    ║
+            ║  3. Scroll to "Integrate calendar"                   ║
+            ║  4. Copy the embed <iframe> code                     ║
+            ║  5. Replace the placeholder <div> below with it      ║
+            ╚══════════════════════════════════════════════════════╝
+          -->
+          <div class="calendar-placeholder">
+            <div class="placeholder-icon">📅</div>
+            <h3>Google Calendar goes here</h3>
+            <p>
+              To embed your group's Google Calendar, open Google Calendar,
+              go to <strong>Settings → [Your Calendar] → Integrate calendar</strong>,
+              and paste the <code>&lt;iframe&gt;</code> embed code in place of this block.
+            </p>
+            <p>The iframe should look roughly like:<br />
+              <code>src="https://calendar.google.com/calendar/embed?src=..."</code>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="join-cta">
+      <div class="container">
+        <h2>New to the group?</h2>
+        <p>All meetings are free and open. Just show up — no RSVP required. Bring pages if you have them, or just come to listen and soak it in.</p>
+        <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-name">The Writers Circle</p>
+      <p class="footer-note">Meeting locally since 2018 &mdash; all genres, all levels, all welcome.</p>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
