@@ -39,6 +39,13 @@
     <section class="resources-section">
       <div class="container">
 
+        <div class="resource-filter">
+          <span class="filter-label">Filter by:</span>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-tag="all">All</button>
+          </div>
+        </div>
+
         <!-- Local Stratford Resources -->
         <div class="resource-group">
           <h2>📍 Local Stratford Resources</h2>
@@ -212,5 +219,34 @@
   </footer>
 
   <script src="nav.js"></script>
+  <script>
+    const tags = new Set();
+    document.querySelectorAll('.res-tag').forEach(el => tags.add(el.textContent.trim()));
+
+    const btnContainer = document.querySelector('.filter-buttons');
+    tags.forEach(tag => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn';
+      btn.dataset.tag = tag;
+      btn.textContent = tag;
+      btnContainer.appendChild(btn);
+    });
+
+    btnContainer.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const selected = btn.dataset.tag;
+      document.querySelectorAll('.resource-card').forEach(card => {
+        const cardTag = card.querySelector('.res-tag').textContent.trim();
+        card.style.display = (selected === 'all' || cardTag === selected) ? '' : 'none';
+      });
+      document.querySelectorAll('.resource-group').forEach(group => {
+        const visible = [...group.querySelectorAll('.resource-card')].some(c => c.style.display !== 'none');
+        group.style.display = visible ? '' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
