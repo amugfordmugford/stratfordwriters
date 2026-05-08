@@ -416,6 +416,9 @@ a:hover { text-decoration: underline; }
 }
 
 .filter-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 999px;
@@ -425,6 +428,7 @@ a:hover { text-decoration: underline; }
   font-weight: 600;
   color: var(--ink-light);
   cursor: pointer;
+  line-height: 1.5;
   transition: background .15s, color .15s, border-color .15s;
 }
 
