@@ -110,6 +110,16 @@ a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 
+.nav-link-forum {
+  color: var(--accent) !important;
+  border: 1px solid var(--border);
+}
+
+.nav-link-forum:hover {
+  background: var(--paper-warm);
+  border-color: var(--accent-lt);
+}
+
 .nav-toggle {
   display: none;
   background: none;
