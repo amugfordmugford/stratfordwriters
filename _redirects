@@ -1,0 +1,8 @@
+# Block common WordPress scanner probes with 410 Gone.
+# Site isn't WordPress; tells well-behaved bots to stop trying.
+/wp-admin/*       /  410
+/wp-login.php     /  410
+/xmlrpc.php       /  410
+/wp-content/*     /  410
+/wp-includes/*    /  410
+/wordpress/*      /  410
